@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "UIAlertManager.h"
 
 @interface ViewController ()
 
@@ -16,7 +17,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    // Sample Code
+    /*-----------------------------------------------------------------------------*/
+    [UIAlertManager showAlertManagerWithViewController:self
+                                             withTitle:@"Title"
+                                           withMessage:@"Message"
+                                     withCancelButtonTitle:@"cancel"
+                                     withOtherButtonTitles:@[@"OK", @"other", @"other", @"other", @"other", @"other", @"other", @"other", @"other"]
+                                            withCompletionBlocks:^(NSInteger buttonIndex) {
+                                                switch (buttonIndex) {
+                                                    case 0:
+                                                        NSLog(@"buttonIndex = %ld",(long)buttonIndex);
+                                                        NSLog(@"cancel");
+                                                        break;
+                                                    case 1:
+                                                        NSLog(@"buttonIndex = %ld",(long)buttonIndex);
+                                                        NSLog(@"ok");
+                                                        break;
+                                                    case 2:
+                                                        NSLog(@"buttonIndex = %ld",(long)buttonIndex);
+                                                        NSLog(@"other");
+                                                        break;
+                                                }
+                                            }];
+    /*-----------------------------------------------------------------------------*/
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+
+    [super viewDidAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -14,6 +14,9 @@
 		0F2439C71B77021300063301 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F2439C61B77021300063301 /* Images.xcassets */; };
 		0F2439CA1B77021300063301 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0F2439C81B77021300063301 /* LaunchScreen.xib */; };
 		0F2439D61B77021300063301 /* UIAlertManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2439D51B77021300063301 /* UIAlertManagerTests.m */; };
+		0F2439F11B772D5600063301 /* UIAlertManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2439F01B772D5600063301 /* UIAlertManager.m */; };
+		0F2439F41B773B6800063301 /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2439F31B773B6800063301 /* UIAlertView+Blocks.m */; };
+		0F2439F71B774DFD00063301 /* UIAlertController+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2439F61B774DFD00063301 /* UIAlertController+Blocks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,12 @@
 		0F2439CF1B77021300063301 /* UIAlertManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIAlertManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F2439D41B77021300063301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0F2439D51B77021300063301 /* UIAlertManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UIAlertManagerTests.m; sourceTree = "<group>"; };
+		0F2439EF1B772D5600063301 /* UIAlertManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAlertManager.h; sourceTree = "<group>"; };
+		0F2439F01B772D5600063301 /* UIAlertManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAlertManager.m; sourceTree = "<group>"; };
+		0F2439F21B773B6800063301 /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
+		0F2439F31B773B6800063301 /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
+		0F2439F51B774DFD00063301 /* UIAlertController+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Blocks.h"; sourceTree = "<group>"; };
+		0F2439F61B774DFD00063301 /* UIAlertController+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Blocks.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +94,7 @@
 				0F2439BE1B77021300063301 /* AppDelegate.m */,
 				0F2439C01B77021300063301 /* ViewController.h */,
 				0F2439C11B77021300063301 /* ViewController.m */,
+				0F2439E71B7721FC00063301 /* UIAlertManager */,
 				0F2439C31B77021300063301 /* Main.storyboard */,
 				0F2439C61B77021300063301 /* Images.xcassets */,
 				0F2439C81B77021300063301 /* LaunchScreen.xib */,
@@ -117,6 +127,27 @@
 				0F2439D41B77021300063301 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0F2439E71B7721FC00063301 /* UIAlertManager */ = {
+			isa = PBXGroup;
+			children = (
+				0F2439EB1B77222D00063301 /* Category */,
+				0F2439EF1B772D5600063301 /* UIAlertManager.h */,
+				0F2439F01B772D5600063301 /* UIAlertManager.m */,
+			);
+			path = UIAlertManager;
+			sourceTree = "<group>";
+		};
+		0F2439EB1B77222D00063301 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				0F2439F21B773B6800063301 /* UIAlertView+Blocks.h */,
+				0F2439F31B773B6800063301 /* UIAlertView+Blocks.m */,
+				0F2439F51B774DFD00063301 /* UIAlertController+Blocks.h */,
+				0F2439F61B774DFD00063301 /* UIAlertController+Blocks.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,6 +252,9 @@
 			files = (
 				0F2439C21B77021300063301 /* ViewController.m in Sources */,
 				0F2439BF1B77021300063301 /* AppDelegate.m in Sources */,
+				0F2439F71B774DFD00063301 /* UIAlertController+Blocks.m in Sources */,
+				0F2439F41B773B6800063301 /* UIAlertView+Blocks.m in Sources */,
+				0F2439F11B772D5600063301 /* UIAlertManager.m in Sources */,
 				0F2439BC1B77021300063301 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,7 +333,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -336,7 +370,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -348,6 +382,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UIAlertManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = UIAlertManager/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +452,7 @@
 				0F2439DB1B77021300063301 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F2439DC1B77021300063301 /* Build configuration list for PBXNativeTarget "UIAlertManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +461,7 @@
 				0F2439DE1B77021300063301 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
