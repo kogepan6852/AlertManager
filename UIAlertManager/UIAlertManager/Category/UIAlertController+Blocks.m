@@ -54,6 +54,8 @@ static NSInteger const UIAlertControllerBlocksFirstOtherButtonIndex = 1;
     return controller;
 }
 
+
+//ひとつにすることができるので、要らないと思います
 + (instancetype)showAlertViewController:(UIViewController *)viewController
                                 withTitle:(NSString *)title
                                   withMessage:(NSString *)message

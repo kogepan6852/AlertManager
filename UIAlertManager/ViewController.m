@@ -18,16 +18,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Sample Code
+    // Sample Code　　AutoLayoutになっていない
     /*-----------------------------------------------------------------------------*/
     [UIAlertManager showAlertManagerWithViewController:self
                                              withTitle:@"Title"
                                            withMessage:@"Message"
                                      withCancelButtonTitle:@"cancel"
-                                     withOtherButtonTitles:@[@"OK", @"other", @"other", @"other", @"other", @"other", @"other", @"other", @"other"]
+                                     withOtherButtonTitles:@[@"OK", @"other", @"other", @"other", @"other", @"other", @"other", @"other", @"other"] //配列名でひとつにしたいです。
                                             withCompletionBlocks:^(NSInteger buttonIndex) {
                                                 switch (buttonIndex) {
-                                                    case 0:
+                                                    case 0://マジックナンバーになっていること,else処理がないこと
                                                         NSLog(@"buttonIndex = %ld",(long)buttonIndex);
                                                         NSLog(@"cancel");
                                                         break;

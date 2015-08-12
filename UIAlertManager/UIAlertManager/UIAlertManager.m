@@ -21,6 +21,7 @@
     
     Class class = NSClassFromString(@"UIAlertController");
     if(class) {
+        //ここの処理を0.1秒止めているんですか。
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1f * NSEC_PER_SEC));
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void) {
             [UIAlertController showAlertViewController:viewController
