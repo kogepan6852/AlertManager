@@ -20,10 +20,4 @@ typedef void (^UIAlertControllerCompletionBlock) (NSInteger buttonIndex);
              withOtherButtonTitles:(NSArray *)otherButtonTitles
               withCompletionBlocks:(UIAlertControllerCompletionBlock)completionBlocks;
 
-+ (instancetype)showAlertViewController:(UIViewController *)viewController
-                              withTitle:(NSString *)title
-                            withMessage:(NSString *)message
-                  withCancelButtonTitle:(NSString *)cancelButtonTitle
-                  withOtherButtonTitles:(NSArray *)otherButtonTitles
-                   withCompletionBlocks:(UIAlertControllerCompletionBlock)tapBlock;
 @end

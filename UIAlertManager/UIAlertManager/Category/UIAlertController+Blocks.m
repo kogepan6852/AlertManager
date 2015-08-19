@@ -23,7 +23,7 @@ static NSInteger const UIAlertControllerBlocksFirstOtherButtonIndex = 1;
     UIAlertController *strongController = [self alertControllerWithTitle:title
                                                                  message:message
                                                           preferredStyle:preferredStyle];
-    __weak UIAlertController *controller = strongController;
+
     
     if (cancelButtonTitle) {
         UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelButtonTitle
@@ -33,7 +33,7 @@ static NSInteger const UIAlertControllerBlocksFirstOtherButtonIndex = 1;
                                                                      completionBlocks(UIAlertControllerBlocksCancelButtonIndex);
                                                                  }
                                                              }];
-        [controller addAction:cancelAction];
+        [strongController addAction:cancelAction];
     }
     
     for (NSUInteger i = 0; i < otherButtonTitles.count; i++) {
@@ -46,29 +46,14 @@ static NSInteger const UIAlertControllerBlocksFirstOtherButtonIndex = 1;
                                                                     completionBlocks(UIAlertControllerBlocksFirstOtherButtonIndex + i);
                                                                 }
                                                             }];
-        [controller addAction:otherAction];
+        [strongController addAction:otherAction];
     }
     
-    [viewController presentViewController:controller animated:YES completion:nil];
+    [viewController presentViewController:strongController animated:YES completion:nil];
     
-    return controller;
+    return strongController;
 }
 
 
-//ひとつにすることができるので、要らないと思います
-+ (instancetype)showAlertViewController:(UIViewController *)viewController
-                                withTitle:(NSString *)title
-                                  withMessage:(NSString *)message
-                        withCancelButtonTitle:(NSString *)cancelButtonTitle
-                        withOtherButtonTitles:(NSArray *)otherButtonTitles
-                                 withCompletionBlocks:(UIAlertControllerCompletionBlock)completionBlocks {
-    return [self showViewController:viewController
-                            withTitle:title
-                              withMessage:message
-                       withPreferredStyle:UIAlertControllerStyleAlert
-                    withCancelButtonTitle:cancelButtonTitle
-                    withOtherButtonTitles:otherButtonTitles
-                             withCompletionBlocks:completionBlocks];
-}
 
 @end

@@ -9,6 +9,11 @@
 #import "ViewController.h"
 #import "UIAlertManager.h"
 
+static NSInteger const CANCEL = 0;
+static NSInteger const OK = 1;
+
+
+
 @interface ViewController ()
 
 @end
@@ -17,25 +22,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSArray *cellStringArray = @[@"OK", @"other", @"other", @"other", @"other", @"other", @"other", @"other", @"other"];
     
-    // Sample Code　　AutoLayoutになっていない
     /*-----------------------------------------------------------------------------*/
     [UIAlertManager showAlertManagerWithViewController:self
                                              withTitle:@"Title"
                                            withMessage:@"Message"
                                      withCancelButtonTitle:@"cancel"
-                                     withOtherButtonTitles:@[@"OK", @"other", @"other", @"other", @"other", @"other", @"other", @"other", @"other"] //配列名でひとつにしたいです。
+                                     withOtherButtonTitles: cellStringArray
                                             withCompletionBlocks:^(NSInteger buttonIndex) {
                                                 switch (buttonIndex) {
-                                                    case 0://マジックナンバーになっていること,else処理がないこと
+                                                    case CANCEL:
                                                         NSLog(@"buttonIndex = %ld",(long)buttonIndex);
                                                         NSLog(@"cancel");
                                                         break;
-                                                    case 1:
+                                                    case OK:
                                                         NSLog(@"buttonIndex = %ld",(long)buttonIndex);
                                                         NSLog(@"ok");
                                                         break;
-                                                    case 2:
+                                                    default:
                                                         NSLog(@"buttonIndex = %ld",(long)buttonIndex);
                                                         NSLog(@"other");
                                                         break;

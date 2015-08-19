@@ -24,12 +24,13 @@
         //ここの処理を0.1秒止めているんですか。
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1f * NSEC_PER_SEC));
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void) {
-            [UIAlertController showAlertViewController:viewController
-                                             withTitle:title
-                                               withMessage:message
-                                     withCancelButtonTitle:cancelButtonTitle
-                                     withOtherButtonTitles:otherButtonTitles
-                                              withCompletionBlocks:completionBlocks];
+            [UIAlertController showViewController:viewController
+                                        withTitle:title
+                                      withMessage:message
+                               withPreferredStyle:UIAlertControllerStyleAlert
+                            withCancelButtonTitle:cancelButtonTitle
+                            withOtherButtonTitles:otherButtonTitles
+                             withCompletionBlocks:completionBlocks];
         });
     } else {
         [UIAlertView showWithTitle:title
